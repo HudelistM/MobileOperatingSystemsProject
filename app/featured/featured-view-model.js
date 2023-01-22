@@ -1,12 +1,14 @@
-import { fromObject } from "@nativescript/core"
+import { fromObject, Observable } from '@nativescript/core'
 import { SelectedPageService } from '../shared/selected-page-service'
+import { AndroidSensors, AndroidSensorListener, SensorDelay } from 'nativescript-android-sensors';
 
 export function FeaturedViewModel() {
-  SelectedPageService.getInstance().updateSelectedPage('Featured')
-
-  const viewModel = fromObject({
-    /* Add your view model properties here */
-  })
-
-  return viewModel
-}
+    const viewModel = new Observable()
+    viewModel.temperature = 0
+    var sensors = new AndroidSensors();
+    const sensorType = sensors.TYPE_AMBIENT_TEMPERATURE;
+      sensors.startSensorUpdates(sensorType, function(data) {
+          viewModel.set('temperature', data.values[0]);
+      });
+    return viewModel
+  }

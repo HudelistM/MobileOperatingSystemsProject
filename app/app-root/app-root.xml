@@ -11,68 +11,73 @@
     <nsDrawer:RadSideDrawer.drawerContent>
         <GridLayout rows="auto, *" class="nt-drawer__content">
             <StackLayout class="nt-drawer__header">
-                <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;" />
-                <Label class="nt-drawer__header-brand" text="User Name" />
-                <Label class="nt-drawer__header-footnote" text="username@mail.com" />
+                <Image class="nt-drawer__header-image fas t-36" src="font://&#xf4fb;" />
+                <Label class="nt-drawer__header-brand" text="Ivan" />
+                <Label class="nt-drawer__header-footnote" text="IvanIvic@croatia-airlines.com" />
             </StackLayout>
 
             <ScrollView row="1">
                 <StackLayout>
                     <GridLayout
             columns="auto, *"
-            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Home' ? ' -selected': '') }}"
+            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Početna' ? ' -selected': '') }}"
             route="home/home-page"
-            title="Home"
+            title="Početna"
             tap="onNavigationItemTap"
           >
-                        <Label row="0" col="0" text="&#xf015;" class="nt-icon fas" />
-                        <Label row="0" col="1" text="Home" class="p-r-10" />
+                        <Label row="0" col="0" text="&#xf0f2;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Početna" class="p-r-10" />
                     </GridLayout>
+
+<StackLayout class="hr" />
 
                     <GridLayout
             columns="auto, *"
-            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Browse' ? ' -selected': '') }}"
+            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Aerodrom' ? ' -selected': '') }}"
             route="browse/browse-page"
-            title="Browse"
+            title="Aerodrom"
             tap="onNavigationItemTap"
           >
-                        <Label row="0" col="0" text="&#xf1ea;" class="nt-icon far" />
-                        <Label row="0" col="1" text="Browse" class="p-r-10" />
+                        <Label row="0" col="0" text="&#xf55e;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Aerodrom" class="p-r-10" />
                     </GridLayout>
 
+<StackLayout class="hr" />
                     <GridLayout
             columns="auto, *"
-            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Search' ? ' -selected': '') }}"
-            route="search/search-page"
-            title="Search"
-            tap="onNavigationItemTap"
-          >
-                        <Label row="0" col="0" text="&#xf002;" class="nt-icon fas" />
-                        <Label row="0" col="1" text="Search" class="p-r-10" />
-                    </GridLayout>
-
-                    <GridLayout
-            columns="auto, *"
-            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Featured' ? ' -selected': '') }}"
+            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Senzor' ? ' -selected': '') }}"
             route="featured/featured-page"
-            title="Featured"
+            title="Senzor"
             tap="onNavigationItemTap"
           >
-                        <Label row="0" col="0" text="&#xf005;" class="nt-icon fas" />
-                        <Label row="0" col="1" text="Featured" class="p-r-10" />
+                        <Label row="0" col="0" text="&#xf0ad;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Senzor" class="p-r-10" />
+                    </GridLayout>
+
+<StackLayout class="hr" />
+
+                    <GridLayout
+            columns="auto, *"
+            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Raspored letova' ? ' -selected': '') }}"
+            route="search/search-page"
+            title="Raspored letova"
+            tap="onNavigationItemTap"
+          >
+                        <Label row="0" col="0" text="&#xf073;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Raspored letova" class="p-r-10" />
                     </GridLayout>
 
                     <StackLayout class="hr" />
 
                     <GridLayout
             columns="auto, *"
-            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Settings' ? ' -selected': '') }}"
+            class="{{ 'nt-drawer__list-item' + (selectedPage === 'Postavke' ? ' -selected': '') }}"
             route="settings/settings-page"
-            title="Settings"
+            title="Postavke"
             tap="onNavigationItemTap"
           >
-                        <Label row="0" col="0" text="&#xf013;" class="nt-icon fas" />
-                        <Label row="0" col="1" text="Settings" class="p-r-10" />
+                        <Label row="0" col="0" text="&#xf0ad;" class="nt-icon fas" />
+                        <Label row="0" col="1" text="Postavke" class="p-r-10" />
                     </GridLayout>
                 </StackLayout>
             </ScrollView>
